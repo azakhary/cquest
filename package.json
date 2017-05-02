@@ -1,7 +1,7 @@
 {
-  "name": "ac_2",
+  "name": "cquest",
   "version": "1.0.0",
-  "description": "Armcode Challenge 2",
+  "description": "Coding Challenge",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
