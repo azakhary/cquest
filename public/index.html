@@ -1,0 +1,98 @@
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="main.css">
+  <script src="main.js"></script>
+</head>
+<body>
+  <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9&appId=147431312048240";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+  <div class="container" id="main-box">
+    <div class="row">
+      <div class="col-md-6">
+        <div>
+          <h2>{ArmCodeChallenge 2}</h2>
+        </div>
+        <div class="well">
+          Welcome to Challenge Engine,
+          Please put your intro text here
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <ul class="nav nav-tabs">
+              <li class="active"><a data-toggle="tab" href="#start" id="start-tab">Start Fresh</a></li>
+              <li><a data-toggle="tab" href="#continue" id="continue-tab">Continue</a></li>
+            </ul>
+            <div class="tab-content">
+              <div id="start" class="tab-pane fade in active">
+                <div class="input-group">
+                  <span class="input-group-addon" id="basic-addon1">@</span>
+                  <input id="play-username" type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group">
+                  <span class="input-group-addon" id="basic-addon1">*</span>
+                  <input id="play-password" type="password" class="form-control" placeholder="Password" aria-describedby="basic-addon2">
+                </div>
+                <div class="input-group pull-right" id="button-holder">
+                  <button type="button" class="btn btn-default" id="play-button">
+                    Play
+                  </button>
+                </div>
+              </div>
+              <div id="continue" class="tab-pane fade">
+                <div id="start" class="tab-pane fade in active">
+                  <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1">@</span>
+                    <input id="load-username" type="text" class="form-control" placeholder="Existing Username" aria-describedby="basic-addon1">
+                  </div>
+                  <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1">*</span>
+                    <input id="load-password" type="password" class="form-control" placeholder="Existing Password" aria-describedby="basic-addon2">
+                  </div>
+                  <div class="input-group pull-right" id="button-holder">
+                    <button type="button" class="btn btn-default" id="load-button">
+                      Load
+                    </button>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="alert alert-danger" role="alert" id = "error-box">
+      <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+      <span class="sr-only">Error:</span>
+      <span id="error-text"></span>
+    </div>
+  </div>
+  <div class="row results">
+    <div class="well leaderboard-title">Leaderboard <span style="font-weight: normal; font-size: 12px; color: gray;">(<span id="num_trying"></span> trying)</span></div>
+    <div class="container-fluid">
+      <div class="row table-header">
+        <div class="col-md-4 title">name</div>
+        <div class="col-md-4 title">time</div>
+        <div class="col-md-4 title">date</div>
+      </div>
+      <div id ="leaderboard-data">
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
